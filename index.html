@@ -1,0 +1,570 @@
+<html>
+  <head>
+    <title>Coffee and Pastry Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="font-poppins">
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 shadow-lg sticky top-0 p-4 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <a class="text-white text-2xl font-bold" href="#"
+          >Brew & Smile Café</a>
+        <div class="space-x-4 hidden md:block">
+          <a class="text-gray-300 hover:text-white nav-link" href="#home"
+            >Home</a
+          >
+          <a class="text-gray-300 hover:text-white nav-link" href="#about"
+            >About Us</a
+          >
+          <a class="text-gray-300 hover:text-white nav-link" href="#products"
+            >Products</a
+          >
+          <a class="text-gray-300 hover:text-white nav-link" href="#cart"
+            >Cart</a
+          >
+          <a class="text-gray-300 hover:text-white nav-link" href="#contact"
+            >Contact Us</a
+          >
+        </div>
+        <div class="md:hidden">
+          <button
+            class="text-gray-300 focus:outline-none text-2xl"
+            id="menu-btn"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="hidden md:hidden transition duration-300 ease-in-out px-4 pt-2"
+        id="mobile-menu"
+      >
+        <a
+          class="block text-gray-300 hover:text-white py-2 nav-link"
+          href="#home"
+          >Home</a
+        >
+        <a
+          class="block text-gray-300 hover:text-white py-2 nav-link"
+          href="#about"
+          >About Us</a
+        >
+        <a
+          class="block text-gray-300 hover:text-white py-2 nav-link"
+          href="#products"
+          >Products</a
+        >
+        <a
+          class="block text-gray-300 hover:text-white py-2 nav-link"
+          href="#cart"
+          >Cart</a
+        >
+        <a
+          class="block text-gray-300 hover:text-white py-2 nav-link"
+          href="#contact"
+          >Contact Us</a
+        >
+      </div>
+    </nav>
+    <!-- Home Section -->
+    <section class="bg-gray-100 py-20 fade-in" id="home">
+      <div class="container mx-auto text-center px-4">
+        <h1 class="text-4xl font-bold mb-4">Best-Selling Coffees & Pastries</h1>
+        <p class="text-gray-700 mb-8">
+          Discover our best-selling coffee and pastries.
+        </p>
+        <div class="carousel">
+          <div class="carousel-inner" id="carousel-inner">
+            <div class="carousel-item">
+              <img
+                alt="Image of a cup of coffee"
+                class="mx-auto hover-effect"
+                height="400"
+                src="delicious-quality-coffee-cup.jpg"
+                width="600"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                alt="Image of a pastry"
+                class="mx-auto hover-effect"
+                height="400"
+                src="close-up-tasty-beverage-with-cream.jpg"
+                width="600"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                alt="Image of a coffee and pastry combo"
+                class="mx-auto hover-effect"
+                height="400"
+                src="Croissants-jar-of-jam.jpg"
+                width="600"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                alt="Image of a cup of coffee"
+                class="mx-auto hover-effect"
+                height="400"
+                src="blueberry-muffins-2136749_1280.jpg"
+                width="600"
+              />
+            </div>
+          </div>
+          <button class="carousel-control-prev" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-control-next" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="carousel-indicators" id="carousel-indicators">
+            <div class="carousel-indicator active" data-slide-to="0"></div>
+            <div class="carousel-indicator" data-slide-to="1"></div>
+            <div class="carousel-indicator" data-slide-to="2"></div>
+            <div class="carousel-indicator" data-slide-to="3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Us Section -->
+    <section class="bg-white py-20 fade-in" id="about">
+      <div class="container mx-auto text-center px-4">
+        <h2 class="text-3xl font-bold mb-4">About Us</h2>
+        <p class="text-gray-700 mb-8">We’re passionate about sharing affordable, high-quality coffee and pastries. Our signature mocha and croissants are crafted to bring joy to your day. We believe coffee makes you stronger, and we’re dedicated to creating a welcoming atmosphere with a smile. Enjoy great coffee, tasty pastries, and a warm experience, all at a price you’ll love.</p>
+        <img
+          alt="Team of baristas and bakers working together"
+          class="mx-auto hover-effect"
+          height="400"
+          src="barista-6197867_1280.jpg"
+          width="600"
+        />
+      </div>
+    </section>
+    <!-- Products Section -->
+    <section class="bg-gray-100 py-20 fade-in" id="products">
+      <div class="container mx-auto text-center px-4">
+        <h2 class="text-3xl font-bold mb-4">Our Products</h2>
+        <p class="text-gray-700 mb-8">
+          We offer a wide range of coffee and pastries to meet your cravings.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg slide-in-up hover-effect flex flex-col items-center"
+          >
+            <img
+              alt="Image of a cup of coffee"
+              class="mb-4"
+              height="200"
+              src="delicious-quality-coffee-cup.jpg"
+              width="300"
+            />
+            <h3 class="text-xl font-bold mb-2">Mocha Coffee</h3>
+            <p class="text-gray-700 mb-4">A rich blend of coffee and chocolate, often sweet and creamy.</p>
+            <p class="text-gray-700 mb-4">Price: ₱130</p>
+            <div class="mt-auto">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 add-to-cart"
+                data-image="delicious-quality-coffee-cup.jpg"
+                data-price="130"
+                data-product="Mocha Coffee"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg slide-in-up hover-effect flex flex-col items-center"
+          >
+            <img
+              alt="Image of a Vanilla Coffee"
+              class="mb-4"
+              height="200"
+              src="close-up-tasty-beverage-with-cream.jpg"
+              width="300"
+            />
+            <h3 class="text-xl font-bold mb-2">Vanilla Coffee</h3>
+            <p class="text-gray-700 mb-4">Smooth and aromatic with a subtle vanilla bean sweetness.</p>
+            <p class="text-gray-700 mb-4">Price: ₱120</p>
+            <div class="mt-auto">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 add-to-cart"
+                data-image="close-up-tasty-beverage-with-cream.jpg"
+                data-price="120"
+                data-product="Vanilla Coffee"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg slide-in-up hover-effect flex flex-col items-center"
+          >
+            <img
+              alt="Image of a Caramel Coffee"
+              class="mb-4"
+              height="200"
+              src="view-3d-coffee-cup.jpg"
+              width="300"
+            />
+            <h3 class="text-xl font-bold mb-2">Caramel Coffee</h3>
+            <p class="text-gray-700 mb-4">
+              Sweet, buttery flavor that adds a smooth, rich depth.
+            </p>
+            <p class="text-gray-700 mb-4">Price: ₱130</p>
+            <div class="mt-auto">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 add-to-cart"
+                data-image="view-3d-coffee-cup.jpg"
+                data-price="130"
+                data-product="Caramel Coffee"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg slide-in-up hover-effect flex flex-col items-center"
+          >
+            <img
+              alt="Image of an Espresso Coffee"
+              class="mb-4"
+              height="200"
+              src="what-is-espresso-765702-hero-03.jpg"
+              width="300"
+            />
+            <h3 class="text-xl font-bold mb-2">Espresso Coffee</h3>
+            <p class="text-gray-700 mb-4">Bold, strong, and slightly bitter with deep coffee intensity.</p>
+            <p class="text-gray-700 mb-4">Price: ₱100</p>
+            <div class="mt-auto">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 add-to-cart"
+                data-image="what-is-espresso-765702-hero-03.jpg"
+                data-price="100"
+                data-product="Espresso Coffee"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg slide-in-up hover-effect flex flex-col items-center"
+          >
+            <img
+              alt="Image of a Cinnamon Coffee"
+              class="mb-4"
+              height="200"
+              src="OIP.vsO_v5pjLyZX-qnk_nOKCwHaFQ.jpg"
+              width="300"
+            />
+            <h3 class="text-xl font-bold mb-2">Cinnamon Coffee</h3>
+            <p class="text-gray-700 mb-4"> A spicy and aromatic flavor that adds warmth to the brew.</p>
+            <p class="text-gray-700 mb-4">Price: ₱120</p>
+            <div class="mt-auto">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 add-to-cart"
+                data-image="OIP.vsO_v5pjLyZX-qnk_nOKCwHaFQ.jpg"
+                data-price="120"
+                data-product="Cinnamon Coffee"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg slide-in-up hover-effect flex flex-col items-center"
+          >
+            <img
+              alt="Image of an Irish Coffee"
+              class="mb-4"
+              height="200"
+              src="Irish-coffee-variations-1-980x54.jpg"
+              width="300"
+            />
+            <h3 class="text-xl font-bold mb-2">Irish Coffee</h3>
+            <p class="text-gray-700 mb-4">
+              A creamy, boozy flavor (non-alcoholic in syrups) with hints of vanilla and cocoa.
+            </p>
+            <p class="text-gray-700 mb-4">Price: ₱135</p>
+            <div class="mt-auto">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 add-to-cart"
+                data-image="Irish-coffee-variations-1-980x54.jpg"
+                data-price="135"
+                data-product="Irish Coffee"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg slide-in-up hover-effect flex flex-col items-center"
+          >
+            <img
+              alt="Image of a Croissant"
+              class="mb-4"
+              height="200"
+              src="Croissants-jar-of-jam.jpg"
+              width="300"
+            />
+            <h3 class="text-xl font-bold mb-2">Croissant</h3>
+            <p class="text-gray-700 mb-4">Golden and airy, made with layers of real butter and baked to perfection. Simple, elegant, and delicious with any coffee.</p>
+            <p class="text-gray-700 mb-4">Price: ₱90</p>
+            <div class="mt-auto">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 add-to-cart"
+                data-image="Croissants-jar-of-jam.jpg"
+                data-price="90"
+                data-product="Croissant"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg slide-in-up hover-effect flex flex-col items-center"
+          >
+            <img
+              alt="Image of a Blueberry Muffins"
+              class="mb-4"
+              height="200"
+              src="blueberry-muffins-2136749_1280.jpg"
+              width="300"
+            />
+            <h3 class="text-xl font-bold mb-2">Blueberry Muffins</h3>
+            <p class="text-gray-700 mb-4">Soft and sweet with bursts of juicy blueberries.</p>
+            <p class="text-gray-700 mb-4">Price: ₱85</p>
+            <div class="mt-auto">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 add-to-cart"
+                data-image="blueberry-muffins-2136749_1280.jpg"
+                data-price="85"
+                data-product="Blueberry Muffins"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg slide-in-up hover-effect flex flex-col items-center"
+          >
+            <img
+              alt="Image of a Cinnamon Roll"
+              class="mb-4"
+              height="200"
+              src="OIP.F9Bniobht8QD9EKvB5QSXQHaE7.jpg"
+              width="300"
+            />
+            <h3 class="text-xl font-bold mb-2">Cinnamon Roll</h3>
+            <p class="text-gray-700 mb-4">
+              Sweet dough swirled with cinnamon and topped with icing.
+            </p>
+            <p class="text-gray-700 mb-4">Price: ₱95</p>
+            <div class="mt-auto">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 add-to-cart"
+                data-image="OIP.F9Bniobht8QD9EKvB5QSXQHaE7.jpg"
+                data-price="95"
+                data-product="Cinnamon Roll"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg slide-in-up hover-effect flex flex-col items-center"
+          >
+            <img
+              alt="Image of an Apple Turnover"
+              class="mb-4"
+              height="200"
+              src="R.a6984aa827bcf83eb8101790e4c314.jpg"
+              width="300"
+            />
+            <h3 class="text-xl font-bold mb-2">Apple Turnover</h3>
+            <p class="text-gray-700 mb-4">Flaky crust with warm, spiced apple filling.</p>
+            <p class="text-gray-700 mb-4">Price: ₱90</p>
+            <div class="mt-auto">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 add-to-cart"
+                data-image="R.a6984aa827bcf83eb8101790e4c314.jpg"
+                data-price="90"
+                data-product="Apple Turnover"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg slide-in-up hover-effect flex flex-col items-center"
+          >
+            <img
+              alt="Image of a Cheese Danish"
+              class="mb-4"
+              height="200"
+              src="Cheese Danish.jpg"
+              width="300"
+            />
+            <h3 class="text-xl font-bold mb-2">Cheese Danish</h3>
+            <p class="text-gray-700 mb-4">Buttery pastry with a creamy, slightly tangy cheese center.</p>
+            <p class="text-gray-700 mb-4">Price: ₱100</p>
+            <div class="mt-auto">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 add-to-cart"
+                data-image="Cheese Danish.jpg"
+                data-price="100"
+                data-product="Cheese Danish"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg slide-in-up hover-effect flex flex-col items-center"
+          >
+            <img
+              alt="Image of a Strawberry Danish"
+              class="mb-4"
+              height="200"
+              src="Strawberry Danish.jpg"
+              width="300"
+            />
+            <h3 class="text-xl font-bold mb-2">Strawberry Danish</h3>
+            <p class="text-gray-700 mb-4">
+              Crispy pastry base topped with custard and sweet strawberry filling. Bright, fruity, and slightly tangy.
+            </p>
+            <p class="text-gray-700 mb-4">Price: ₱100</p>
+            <div class="mt-auto">
+              <button
+                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 add-to-cart"
+                data-image="Strawberry Danish.jpg"
+                data-price="100"
+                data-product="Strawberry Danish"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Cart Section -->
+    <section class="bg-white py-20 fade-in" id="cart">
+      <div class="container mx-auto text-center px-4">
+        <h2 class="text-3xl font-bold mb-4">Your Cart</h2>
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+          <ul class="mb-4" id="cart-items"></ul>
+          <p class="text-xl font-bold">
+            Total: ₱<span id="cart-total">0</span>
+          </p>
+          <button
+            class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600"
+            id="purchase-btn"
+          >
+            Purchase
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Us Section -->
+    <section class="bg-gray-100 py-20 fade-in" id="contact">
+      <div class="container mx-auto text-center px-4">
+        <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+        <p class="text-gray-700 mb-8">
+          Get in touch with us for any queries or support.
+        </p>
+        <form class="max-w-lg mx-auto">
+          <div class="mb-4 flex items-center input-container">
+            <i class="fas fa-user mr-2 text-gray-500 hover-effect icon"></i>
+            <input
+              class="w-full p-3 border border-gray-300 rounded-lg hover-effect"
+              placeholder="Your Name"
+              type="text"
+            />
+          </div>
+          <div class="mb-4 flex items-center input-container">
+            <i class="fas fa-envelope mr-2 text-gray-500 hover-effect icon"></i>
+            <input
+              class="w-full p-3 border border-gray-300 rounded-lg hover-effect"
+              placeholder="Your Email"
+              type="email"
+            />
+          </div>
+          <div class="mb-4 flex items-start input-container">
+            <i
+              class="fas fa-comment mr-2 text-gray-500 hover-effect icon mt-3"
+            ></i>
+            <textarea
+              class="w-full p-3 border border-gray-300 rounded-lg hover-effect"
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+          <input
+            class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600"
+            type="submit"
+            value="Send Message"
+          />
+        </form>
+        <div class="mt-8">
+          <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
+          <div class="flex justify-center space-x-4">
+            <a
+              class="text-gray-500 hover:text-gray-700"
+              href="https://facebook.com"
+              target="_blank"
+            >
+              <i class="fab fa-facebook fa-2x hover-effect"></i>
+            </a>
+            <a
+              class="text-gray-500 hover:text-gray-700"
+              href="https://twitter.com"
+              target="_blank"
+            >
+              <i class="fab fa-twitter fa-2x hover-effect"></i>
+            </a>
+            <a
+              class="text-gray-500 hover:text-gray-700"
+              href="https://instagram.com"
+              target="_blank"
+            >
+              <i class="fab fa-instagram fa-2x hover-effect"></i>
+            </a>
+            <a
+              class="text-gray-500 hover:text-gray-700"
+              href="https://linkedin.com"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin fa-2x hover-effect"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4">
+      <div class="container mx-auto text-center text-gray-300">
+        <p>© 2025 Coffee &amp; Pastry Shop. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>

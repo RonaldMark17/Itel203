@@ -1,0 +1,106 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    
+}
+::selection {
+    background-color: #2d3748; 
+    color: white;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes slideInUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+.slide-in-up {
+    animation: slideInUp 1s ease-in-out;
+}
+.hover-effect:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+.nav-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: white;
+    transition: width 0.4s ease;
+    -webkit-transition: width 0.4s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+    background: white;
+}
+html {
+    scroll-behavior: smooth;
+}
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.carousel-control-prev {
+    left: 10px;
+}
+.carousel-control-next {
+    right: 10px;
+}
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.carousel-indicator.active {
+    background-color: white;
+}
+
+.hover-effect:hover {
+    color: #4A5568; /* Tailwind's gray-700 */
+    background-color: #F7F7F7; /* Tailwind's gray-100 */
+}
+.input-container:hover .icon {
+    transform: translateX(-10px);
+    transition: transform 0.3s ease-in-out;
+}
